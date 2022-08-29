@@ -1,0 +1,38 @@
+{
+    "name": "pablosanches/value-objects",
+    "description": "A Value Objects Library",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "PabloSanches\\ValueObjects\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "PabloSanches\\ValueObjects\\Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Pablo Sanches",
+            "email": "sanches.webmaster@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require-dev": {
+        "phpunit/phpunit": "*",
+        "squizlabs/php_codesniffer": "*",
+        "mockery/mockery": "*",
+        "fakerphp/faker": "^1.20"
+    },
+    "scripts": {
+        "test": "phpunit --coverage-html tests/_reports",
+        "cs": "phpcs --standard=PSR12",
+        "csf": "phpcbf --standard=PSR12",
+        "deploy": [
+            "@cs",
+            "@test"
+        ]
+    }
+}
